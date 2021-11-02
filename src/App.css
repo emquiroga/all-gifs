@@ -10,7 +10,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #282c34;
+  background-color: #000814;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 }
 
 a {
-  color: #61dafb;
+  color: #480ca8;
   font-size: 1.5rem;
   text-decoration: none;
 }

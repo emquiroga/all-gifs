@@ -1,21 +1,31 @@
 import React from 'react';
 import './App.css';
+import Logo from './Logo.png';
 
 import { Route, Link } from 'wouter';
 
-import ListOfGifs from './components/ListOfGifs';
+import Home from './pages/Home';
+import SearchResults from './pages/SearchResults';
+import Detail from './pages/Detail';
+
+import { Context } from './context/StaticContext';
+import { GifsContextProvider } from './context/GifsContext';
+
 
 function App() {
   return (
+  <Context.Provider value={{}}>
     <div className="App">
       <section className="App-Content">
-        <h1>All Gifs</h1>
-        <Link to="/gif/shinji">Gifs de Shinji</Link>
-        <Link to="/gif/asuka">Gifs de Asuka</Link>
-        <Link to="/gif/rei-ayanami">Gifs de Rei</Link>
-        <Route path="/gif/:keyword" component={ListOfGifs} />
+        <Link to="/"> <img src={Logo} alt="All Gifs Logo" /></Link>
+        <GifsContextProvider>
+        <Route path="/" component={Home} />
+        <Route path="/search/:keyword" component={SearchResults} />
+        <Route path="/gif/:id" component={Detail} />
+        </GifsContextProvider>
       </section>
     </div>
+  </Context.Provider>
   );
 }
 
