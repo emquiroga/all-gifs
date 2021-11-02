@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Logo from './Logo.png';
 
 import { Route, Link } from 'wouter';
 
@@ -17,7 +16,7 @@ function App() {
   <Context.Provider value={{}}>
     <div className="App">
       <section className="App-Content">
-        <Link to="/"> <img src={Logo} alt="All Gifs Logo" /></Link>
+        <Link to="/"><h1 className="text-gradient">*-GifHub-*</h1></Link>
         <GifsContextProvider>
         <Route path="/" component={Home} />
         <Route path="/search/:keyword" component={SearchResults} />

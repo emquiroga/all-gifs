@@ -1,0 +1,16 @@
+.Category-title {
+  color: #f9844a;
+}
+.Category-list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  display: inline-block;
+}
+.Category-link {
+  text-decoration: none;
+  color: #90be6d;
+}
+.Category-link:hover {
+  color: #f9c74f;
+}

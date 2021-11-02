@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'wouter'
-import ListOfGifs from '../../components/ListOfGifs/ListOfGifs'
-import { useGifs } from '../../hooks/useGifs'
+import { useLocation } from 'wouter'
+import ListOfGifs from 'components/ListOfGifs/ListOfGifs'
+import { useGifs } from 'hooks/useGifs'
 import "./Home.css"
+import LazyTrending from 'components/LazyTrending/LazyTrending'
 
 const Home = () => {
-    const POPULAR_GIFS = ["Dune", "Eternals", "Batman"]
     const [keyword, setKeyword] = useState("")
-    const [pushLocation] = useLocation()
+    const [path, pushLocation] = useLocation()
     const {gifs} = useGifs()
 
     const handleSubmit = (e) => {
@@ -22,17 +22,19 @@ const Home = () => {
         <>
          <form onSubmit={handleSubmit}>
              <input placeholder="Search your gifs..." type="text" value={keyword} onChange={handleChange} />
+             <button type="submit">Search</button>
          </form>
-         <h3>Last search</h3> 
-         <ListOfGifs gifs={gifs} />
-         <h3>Trending gifs</h3>
-         <ul className="HomeList">
-            {POPULAR_GIFS.map(gif => (
-            <li>
-                <Link to={`/search/${gif}`}>Gifs de {gif}</Link>
-            </li>
-            ))}  
-         </ul>
+         <div className="App-main">
+             <div className="App-results">
+                <h3 className="App-title">Last search</h3> 
+                <ListOfGifs gifs={gifs} />
+             </div> 
+             <div className="App-category">
+                <LazyTrending />
+             </div>
+         </div>
+        
+         
         </>
     )
 }
