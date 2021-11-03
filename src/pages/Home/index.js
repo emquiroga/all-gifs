@@ -7,6 +7,7 @@ import LazyTrending from 'components/LazyTrending/LazyTrending'
 import SearchForm from 'components/SearchForm/SearchForm'
 
 const Home = () => {
+    // eslint-disable-next-line no-unused-vars
     const [path, pushLocation] = useLocation()
     const {gifs} = useGifs()
 

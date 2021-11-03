@@ -22,6 +22,7 @@ function App() {
         <Route path="/" component={HomePage} />
         <Route path="/search/:keyword" component={SearchResults} />
         <Route path="/gif/:id" component={Detail} />
+        <Route path="/404" component={() => <h1 className="text-gradient">--/ 404 ERROR UwU /--</h1>} />
         </GifsContextProvider>
       </section>
       </Suspense>

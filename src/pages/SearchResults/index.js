@@ -11,6 +11,7 @@ const SearchResults = ({params}) => {
   const externalRef = useRef();
   const {isNearScreen} = useNearScreen({externalRef: loading ? null : externalRef, once: false});
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceHandleNextPage = useCallback(debounce(() => setPage(page => page + 1), 250), [setPage]);
 
   useEffect(() => {

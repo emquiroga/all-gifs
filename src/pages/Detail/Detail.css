@@ -1,0 +1,7 @@
+.App-title {
+  font-family: var(--font-primary);
+  text-align: center;
+  color: var(--brand-color_2);
+  background-color: var(--brand-color_7);
+  text-shadow: 2px 2px 0 var(--brand-color_10);
+}

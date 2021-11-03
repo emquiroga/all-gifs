@@ -1,3 +1,20 @@
+:root {
+  --font-size: 16px;
+  --font-primary: "Exo", sans-serif;
+  --theme-body-bg: #000814;
+  --brand-color_1: #f94144;
+  --brand-color_2: #f3722c;
+  --brand-color_3: #f8961e;
+  --brand-color_4: #f9844a;
+  --brand-color_5: #f9c74f;
+  /*NOT USED ACTUALLY*/
+  --brand-color_6: #90be6d;
+  --brand-color_7: #43aa8b;
+  --brand-color_8: #4d908e;
+  --brand-color_9: #577590;
+  --brand-color_10: #277da1;
+}
+
 html {
   box-sizing: border-box;
 }

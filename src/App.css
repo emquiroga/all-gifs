@@ -8,7 +8,7 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: #000814;
+  background-color: var(--theme-body-bg);
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: left;
