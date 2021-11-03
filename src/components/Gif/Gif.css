@@ -15,10 +15,8 @@
   margin: 0;
   position: absolute;
 }
-.Gif img {
+.Gif-link img {
   width: 100%;
-  margin: 0;
-  padding: 0;
   object-fit: contain;
   vertical-align: top;
 }

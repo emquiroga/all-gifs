@@ -1,69 +1,33 @@
-.HomeList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-form input {
-  padding: 1rem;
-  margin: 0 0.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #577590;
-  color: #f3722c;
-  font-size: 1rem;
-  outline: none;
-}
-form input::placeholder {
-  font-size: 1rem;
-  color: #f3722c;
-}
-form button {
-  padding: 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #f9c74f;
-  font-size: 1rem;
-  cursor: pointer;
-}
-form button:hover {
-  background-color: #f3722c;
-  color: #fff;
-  transition: all 100ms ease-in;
-}
-
 .App-main {
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  align-items: flex-start;
 }
-.App-title {
-  margin: 1rem;
+.App-results {
+  flex-shrink: 2;
+}
+.App-subtitle {
   padding: 1rem 0;
   font-size: 2.5rem;
   color: #f9c74f;
   text-align: left;
+  font-family: "Exo", sans-serif;
+}
+
+.App-category {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .App-main {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .App-results {
-    width: 65%;
+    flex-direction: initial;
   }
   .App-category {
-    display: flex;
-    flex-flow: column;
-    width: 30%;
-    margin: 0;
-    padding: 0;
+    position: sticky;
+    top: 0;
+    width: 40%;
+    padding: 0 2em;
   }
 }

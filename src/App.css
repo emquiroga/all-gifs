@@ -1,33 +1,23 @@
 .App {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
-
 .App-Content {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #000814;
   min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+  background-color: #000814;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: left;
 }
-
-a {
-  color: #480ca8;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
 .text-gradient {
   font-family: "Exo", sans-serif;
   font-size: 4rem;
   font-weight: 900;
+  text-align: center;
   background-color: #f94144;
   background-image: linear-gradient(
     45deg,

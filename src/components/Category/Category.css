@@ -1,11 +1,29 @@
+.Category {
+  margin: 0;
+  padding: 0;
+}
 .Category-title {
   color: #f9844a;
+  font-family: "Exo", sans-serif;
 }
 .Category-list {
-  list-style: none;
-  margin: auto;
+  list-style-position: inside;
+  margin: 0;
   padding: 0;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and min-width: 768px {
+  .Category-list {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+}
+.Category-list li {
+  list-style: none;
+  padding: 0.3rem;
+  margin: 0.2rem;
 }
 .Category-link {
   text-decoration: none;

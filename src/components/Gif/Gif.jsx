@@ -13,4 +13,4 @@ const Gif = ({ title, url, id }) => {
   );
 };
 
-export default Gif;
+export default React.memo(Gif);
