@@ -3,6 +3,8 @@
 }
 
 .Gif {
+  max-width: 800px;
+  margin: 2rem auto;
   position: relative;
   display: flex;
   flex-flow: column;

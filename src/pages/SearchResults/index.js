@@ -4,12 +4,15 @@ import ListOfGifs from 'components/ListOfGifs/ListOfGifs'
 import { useGifs } from 'hooks/useGifs'
 import { useNearScreen } from 'hooks/useNearScreen'
 import debounce from 'just-debounce-it'
+import { useTitle } from 'hooks/useTitle'
 
 const SearchResults = ({params}) => {
   const { keyword } = params;
   const {loading, gifs, setPage} = useGifs({keyword}); 
   const externalRef = useRef();
   const {isNearScreen} = useNearScreen({externalRef: loading ? null : externalRef, once: false});
+  const title = gifs ? `${gifs.length} results for ${keyword}` : 'Search...';
+  useTitle({title});
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceHandleNextPage = useCallback(debounce(() => setPage(page => page + 1), 250), [setPage]);
