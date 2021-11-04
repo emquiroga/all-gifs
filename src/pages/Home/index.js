@@ -5,6 +5,8 @@ import { useGifs } from 'hooks/useGifs'
 import "./Home.css"
 import LazyTrending from 'components/LazyTrending/LazyTrending'
 import SearchForm from 'components/SearchForm/SearchForm'
+import { Helmet } from 'react-helmet';
+
 
 const Home = () => {
     // eslint-disable-next-line no-unused-vars
@@ -17,6 +19,10 @@ const Home = () => {
 
     return (
         <>
+        <Helmet>
+            <title>Home - GifHub</title>
+            <meta name="description" content="Home page of GifHub" />
+        </Helmet>
         <SearchForm 
         onSubmit={handleSubmit}
         />
