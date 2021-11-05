@@ -1,13 +1,18 @@
 form {
   display: flex;
-  flex-flow: row;
+  flex-direction: column-reverse;
   max-width: 800px;
   margin: auto auto 2rem auto;
   overflow: hidden;
-  box-shadow: 3px 3px 0px var(--brand-color_1);
+  box-shadow: 3px 3px 0px var(--brand-color_6);
+}
+@media screen and (min-width: 768px) {
+  form {
+    flex-direction: row;
+  }
 }
 form:hover {
-  box-shadow: 3px 3px 5px var(--brand-color_1);
+  box-shadow: 3px 3px 3px var(--brand-color_1);
   transition: all 150ms ease-in-out;
 }
 form input {
