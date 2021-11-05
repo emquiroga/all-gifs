@@ -5,11 +5,13 @@ import { useGifs } from 'hooks/useGifs'
 import { useNearScreen } from 'hooks/useNearScreen'
 import debounce from 'just-debounce-it'
 import { Helmet } from 'react-helmet';
+import SearchForm from 'components/SearchForm/SearchForm'
+import "./SearchResults.css"
 
 
 const SearchResults = ({params}) => {
-  const { keyword } = params;
-  const {loading, gifs, setPage} = useGifs({keyword}); 
+  const { keyword, rating = 'g' } = params;
+  const {loading, gifs, setPage} = useGifs({keyword, rating}); 
   const externalRef = useRef();
   const {isNearScreen} = useNearScreen({externalRef: loading ? null : externalRef, once: false});
 
@@ -30,7 +32,11 @@ const SearchResults = ({params}) => {
              <title>{gifs ? `${gifs.length} results for ${keyword} - GifHub` : "Search..."}</title>
              <meta name="description" content={gifs ? `${gifs.length} results for ${keyword} - GifHub` : "Search..."} />
              <meta name="rating" content="General" />
+             <link rel="canonical" href="https://gifhub.vercel.app/"/>
            </Helmet>
+           <header>
+             <SearchForm initialRating={rating} initialKeyword={keyword} />
+           </header>
            <h3 className="App-title">{decodeURI(keyword)}</h3>
            <ListOfGifs gifs={gifs} />
            <div id="visor" ref={externalRef}></div>

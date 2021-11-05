@@ -1,5 +1,4 @@
-import React, {useCallback} from 'react'
-import { useLocation } from 'wouter'
+import React from 'react'
 import ListOfGifs from 'components/ListOfGifs/ListOfGifs'
 import { useGifs } from 'hooks/useGifs'
 import "./Home.css"
@@ -10,22 +9,17 @@ import { Helmet } from 'react-helmet';
 
 const Home = () => {
     // eslint-disable-next-line no-unused-vars
-    const [path, pushLocation] = useLocation()
     const {gifs} = useGifs()
 
-    const handleSubmit = useCallback(({keyword}) => {
-        pushLocation(`/search/${keyword}`)
-    }, [pushLocation])
 
     return (
         <>
         <Helmet>
             <title>Home - GifHub</title>
             <meta name="description" content="Home page of GifHub" />
+            <link rel="canonical" href="https://gifhub.vercel.app/"/>
         </Helmet>
-        <SearchForm 
-        onSubmit={handleSubmit}
-        />
+        <SearchForm />
          <div className="App-main">
              <div className="App-results">
                 <h3 className="App-subtitle">Last search</h3> 

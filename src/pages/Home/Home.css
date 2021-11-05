@@ -7,9 +7,13 @@
   flex-shrink: 2;
 }
 .App-subtitle {
-  padding: 1rem 0;
-  font-size: 2.5rem;
-  color: #f9c74f;
+  max-width: 500px;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  background-color: var(--brand-color_8);
+  text-shadow: 2px 2px 0 var(--brand-color_10);
+  box-shadow: 2px 2px 0 var(--brand-color_5);
+  color: var(--brand-color_5);
   text-align: left;
   font-family: "Exo", sans-serif;
 }

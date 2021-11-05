@@ -2,33 +2,51 @@ form {
   display: flex;
   flex-flow: row;
   max-width: 800px;
+  margin: auto auto 2rem auto;
+  overflow: hidden;
+  box-shadow: 3px 3px 0px var(--brand-color_1);
+}
+form:hover {
+  box-shadow: 3px 3px 5px var(--brand-color_1);
+  transition: all 150ms ease-in-out;
 }
 form input {
-  width: 60%;
   padding: 1rem;
-  margin-right: 1rem;
+  font-family: var(--font-primary);
   border: none;
-  border-radius: 0.5rem;
-  background-color: #577590;
-  color: #f3722c;
+  background-color: var(--brand-color_10);
+  color: var(--brand-color_5);
   font-size: 1rem;
   outline: none;
 }
+form input:focus {
+  background-color: var(--brand-color_8);
+}
 form input::placeholder {
   font-size: 1rem;
-  color: #f3722c;
+  color: var(--brand-color_6);
+  font-family: var(--font-primary);
 }
 form button {
-  width: 30%;
   padding: 1rem;
   border: none;
-  border-radius: 0.5rem;
-  background-color: #f9c74f;
+  background-color: var(--brand-color_4);
+  color: var(--brand-color_10);
   font-size: 1rem;
   cursor: pointer;
+  font-family: var(--font-primary);
 }
 form button:hover {
-  background-color: #f3722c;
-  color: #fff;
+  background-color: var(--brand-color_6);
+  color: var(--brand-color_9);
   transition: all 100ms ease-in;
+}
+form select {
+  padding: 1rem;
+  font-family: var(--font-primary);
+  border: none;
+  outline: none;
+  background-color: var(--brand-color_3);
+  color: var(--brand-color_10);
+  cursor: pointer;
 }

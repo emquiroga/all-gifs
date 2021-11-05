@@ -20,7 +20,7 @@ function App() {
         <Link to="/"><h1 className="text-gradient">*-GifHub-*</h1></Link>
         <GifsContextProvider>
         <Route path="/" component={HomePage} />
-        <Route path="/search/:keyword" component={SearchResults} />
+        <Route path="/search/:keyword/:rating?" component={SearchResults} />
         <Route path="/gif/:id" component={Detail} />
         <Route path="/404" component={() => <h1 className="text-gradient">--/ 404 ERROR UwU /--</h1>} />
         </GifsContextProvider>

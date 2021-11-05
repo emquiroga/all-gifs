@@ -3,7 +3,11 @@
   padding: 0;
 }
 .Category-title {
-  color: #f9844a;
+  padding: 0.5rem 1rem;
+  background-color: var(--brand-color_5);
+  text-shadow: 2px 2px 0 var(--brand-color_2);
+  box-shadow: 2px 2px 0 var(--brand-color_8);
+  color: var(--brand-color_8);
   font-family: "Exo", sans-serif;
 }
 .Category-list {
@@ -30,7 +34,7 @@
   color: var(--theme-body-bg);
 }
 .Category-link:hover {
-  color: #f9c74f;
+  color: white;
 }
 .Category-list-item:nth-child(5n + 1) {
   background-color: var(--brand-color_6);

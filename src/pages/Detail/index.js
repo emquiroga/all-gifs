@@ -27,6 +27,7 @@ const Detail = ({params}) => {
         <Helmet>
             <title>{title} - GifHub</title>
             <meta name="description" content={title} />
+            <link rel="canonical" href="https://gifhub.vercel.app/"/>
         </Helmet>
         <h3 className="App-title">{gif.title}</h3>
         <Gif {...gif} />
