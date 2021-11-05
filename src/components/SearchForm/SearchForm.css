@@ -4,7 +4,8 @@ form {
   max-width: 800px;
   margin: auto auto 2rem auto;
   overflow: hidden;
-  box-shadow: 3px 3px 0px var(--brand-color_6);
+  border-radius: 1rem;
+  box-shadow: 3px 3px 0px var(--brand-color_8);
 }
 @media screen and (min-width: 768px) {
   form {
@@ -19,30 +20,28 @@ form input {
   padding: 1rem;
   font-family: var(--font-primary);
   border: none;
-  background-color: var(--brand-color_10);
-  color: var(--brand-color_5);
+  background-color: white;
+  color: var(--brand-color_9);
   font-size: 1rem;
   outline: none;
 }
-form input:focus {
-  background-color: var(--brand-color_8);
-}
+
 form input::placeholder {
   font-size: 1rem;
-  color: var(--brand-color_6);
+  color: var(--brand-color_10);
   font-family: var(--font-primary);
 }
 form button {
   padding: 1rem;
   border: none;
-  background-color: var(--brand-color_4);
+  background-color: var(--brand-color_6);
   color: var(--brand-color_10);
   font-size: 1rem;
   cursor: pointer;
   font-family: var(--font-primary);
 }
 form button:hover {
-  background-color: var(--brand-color_6);
+  background-color: var(--brand-color_4);
   color: var(--brand-color_9);
   transition: all 100ms ease-in;
 }

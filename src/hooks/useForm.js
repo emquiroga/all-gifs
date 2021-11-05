@@ -2,7 +2,7 @@ import { useReducer} from "react";
 import { searchReducer } from "reducers/searchReducer";
 import { ACTIONS } from "actions/searchActions";
 
-export const useForm = ({ initialKeyword, initialRating }) => {
+export const useForm = ({ initialKeyword = "", initialRating= "g" } = {}) => {
     const [state, dispatch] = useReducer(searchReducer, {
       keyword: decodeURIComponent(initialKeyword),
       rating: initialRating,
