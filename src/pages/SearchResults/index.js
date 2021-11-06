@@ -34,9 +34,9 @@ const SearchResults = ({params}) => {
              <meta name="rating" content="General" />
              <link rel="canonical" href="https://gifhub.vercel.app/"/>
            </Helmet>
-           <header>
+           <div className="form-container">
              <SearchForm initialRating={rating} initialKeyword={keyword} />
-           </header>
+           </div>
            <h3 className="App-title">{decodeURI(keyword)}</h3>
            <ListOfGifs gifs={gifs} />
            <div id="visor" ref={externalRef}></div>

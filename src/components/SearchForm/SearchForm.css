@@ -1,4 +1,4 @@
-form {
+.Search-Form {
   display: flex;
   flex-direction: column-reverse;
   max-width: 800px;
@@ -8,15 +8,15 @@ form {
   box-shadow: 3px 3px 0px var(--brand-color_8);
 }
 @media screen and (min-width: 768px) {
-  form {
+  .Search-Form {
     flex-direction: row;
   }
 }
-form:hover {
+.Search-Form:hover {
   box-shadow: 3px 3px 3px var(--brand-color_1);
   transition: all 150ms ease-in-out;
 }
-form input {
+.Search-Form input {
   padding: 1rem;
   font-family: var(--font-primary);
   border: none;
@@ -26,12 +26,12 @@ form input {
   outline: none;
 }
 
-form input::placeholder {
+.Search-Form input::placeholder {
   font-size: 1rem;
   color: var(--brand-color_10);
   font-family: var(--font-primary);
 }
-form button {
+.Search-Form button {
   padding: 1rem;
   border: none;
   background-color: var(--brand-color_6);
@@ -40,12 +40,12 @@ form button {
   cursor: pointer;
   font-family: var(--font-primary);
 }
-form button:hover {
+.Search-Form button:hover {
   background-color: var(--brand-color_4);
   color: var(--brand-color_9);
   transition: all 100ms ease-in;
 }
-form select {
+.Search-Form select {
   padding: 1rem;
   font-family: var(--font-primary);
   border: none;

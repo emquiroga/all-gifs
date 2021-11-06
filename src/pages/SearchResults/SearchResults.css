@@ -1,4 +1,4 @@
-header {
+.form-container {
   display: flex;
   flex-flow: row;
   justify-content: center;

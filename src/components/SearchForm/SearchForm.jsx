@@ -33,7 +33,7 @@ const SearchForm = ({ initialRating = "g", initialKeyword = "" }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="Search-Form" onSubmit={handleSubmit}>
       <button type="submit">Search</button>
       <input
         placeholder="Search your gifs..."
