@@ -4,7 +4,6 @@ import { Link } from "wouter";
 import "./Header.css";
 
 const Header = () => {
-  //   const isLogged = false;
   const { isLogged, logout } = useUser();
   const handleLogout = () => {
     logout();

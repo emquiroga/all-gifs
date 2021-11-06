@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import getFavs from "services/getFavs";
 
 const Context = React.createContext({});
 
 export const UserContextProvider = ({children}) => {
-    const [token, setToken] = useState(null);
+    const [favs, setFavs] = useState([]);
+    const [jwt, setJWT] = useState(
+        () => window.sessionStorage.getItem("jwt")
+    );
+    useEffect(()=> {
+        if (!jwt) return setFavs([]);
+        getFavs({jwt}).then(setFavs);
+    },[jwt])
+
     return (
-    <Context.Provider value={{token, setToken}}>
+    <Context.Provider value={{jwt, setJWT, favs, setFavs}}>
         {children}
     </Context.Provider>
     )

@@ -1,0 +1,16 @@
+.Gif-fav {
+  background: rgba(255, 172, 172, 0.3);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transition: all 150 ease-in-out;
+}
+.Gif-fav:hover {
+  background: rgba(255, 172, 172, 0.87);
+}
+.Gif-fav span {
+  display: block;
+  width: 20px;
+}

@@ -4,8 +4,28 @@
 }
 .App-header a {
   color: white;
-  text-decoration: none;
 }
-.App-header a:hover {
-  text-decoration: underline;
+.App-header a:hover,
+.App-header button:hover {
+  background-color: var(--brand-color_5);
+  border: 2px solid var(--brand-color_10);
+  color: var(--brand-color_10);
+  transition: all 150ms ease-in-out;
+}
+
+.App-header button,
+.App-header a {
+  width: 100px;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  background-color: var(--brand-color_6);
+  border: 2px solid var(--brand-color_8);
+  border-radius: 15px;
+  color: var(--theme-body-bg);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font-primary);
 }

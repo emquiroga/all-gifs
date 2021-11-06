@@ -6,7 +6,8 @@ const Login = () => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [, pushLocation] = useLocation()
-    const {login, isLogged} = useUser
+    const {login, isLogged, isLoginLoading,
+        isLoginError} = useUser();
 
     useEffect(() => {
         if(isLogged) {
@@ -16,11 +17,14 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        login({username, password})
-    }
+        login({username, password});
+    };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <>
+        <h2>Login</h2>
+        {isLoginLoading && <strong>Checking credentials...</strong>}
+        {!isLoginLoading && <form onSubmit={handleSubmit}>
             <input 
             placeholder="username" 
             type="text"
@@ -35,6 +39,9 @@ const Login = () => {
             />
             <button type="submit">Login</button>
         </form>
+        }
+        {isLoginError && <strong>Invalid credentials</strong>}
+        </>
     )
 }
 export default Login

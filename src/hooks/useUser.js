@@ -1,24 +1,47 @@
-import { useCallback, useContext } from "react"
+import { useCallback, useContext, useState } from "react"
 import Context from "context/UserContext"
 import { loginService } from "services/login"
+import { addFavService } from "services/addFavService"
 
 
 export const useUser = () => {
-    const {token, setToken} = useContext(Context)
+    const {jwt, setJWT, favs, setFavs} = useContext(Context)
+    const [state, setState] = useState({
+        loading: false, error: false
+    })
    
     const login = useCallback(({username, password}) => {
+        setState({loading: true, error: false })
         loginService({username, password})
-        .then(({token}) => setToken(token))
-        .catch(err => console.log(err))
-    }, [setToken])
+          .then(jwt => {
+            window.sessionStorage.setItem('jwt', jwt)
+            setState({loading: false, error: false })
+            setJWT(jwt)
+          })
+          .catch(err => {
+            window.sessionStorage.removeItem('jwt')
+            setState({loading: false, error: true })
+            console.error(err)
+          })
+    }, [setJWT])
+
+    const addFav = useCallback(({id}) => {
+      addFavService({id, jwt})
+        .then(setFavs)
+        .catch(err => console.error(err))
+    }, [jwt, setFavs])
 
     const logout = useCallback(() => {
-        setToken(null)
-    }, [setToken])
+        setJWT(null)
+    }, [setJWT])
 
     return {
-        isLogged: Boolean(token),
+        isLogged: Boolean(jwt),
         login,
-        logout
+        logout,
+        isLoginLoading: state.loading,
+        isLoginError: state.error,
+        addFav,
+        favs
     }
 }

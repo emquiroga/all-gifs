@@ -1,23 +1,15 @@
 .Search-Form {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   max-width: 800px;
   margin: auto auto 2rem auto;
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: 3px 3px 0px var(--brand-color_8);
+  box-shadow: 3px 3px 0px var(--brand-color_5);
 }
-@media screen and (min-width: 768px) {
-  .Search-Form {
-    flex-direction: row;
-  }
-}
-.Search-Form:hover {
-  box-shadow: 3px 3px 3px var(--brand-color_1);
-  transition: all 150ms ease-in-out;
-}
+
 .Search-Form input {
-  padding: 1rem;
+  padding: 1rem 0;
   font-family: var(--font-primary);
   border: none;
   background-color: white;
@@ -32,25 +24,26 @@
   font-family: var(--font-primary);
 }
 .Search-Form button {
+  width: 50px;
+  height: auto;
   padding: 1rem;
   border: none;
   background-color: var(--brand-color_6);
-  color: var(--brand-color_10);
+  color: var(--brand-color_9);
   font-size: 1rem;
   cursor: pointer;
   font-family: var(--font-primary);
 }
 .Search-Form button:hover {
-  background-color: var(--brand-color_4);
-  color: var(--brand-color_9);
+  background-color: var(--brand-color_5);
+  color: var(--brand-color_10);
   transition: all 100ms ease-in;
 }
 .Search-Form select {
-  padding: 1rem;
   font-family: var(--font-primary);
   border: none;
   outline: none;
-  background-color: var(--brand-color_3);
-  color: var(--brand-color_10);
+  background-color: var(--brand-color_8);
+  color: white;
   cursor: pointer;
 }
