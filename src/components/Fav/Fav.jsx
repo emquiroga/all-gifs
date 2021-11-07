@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 import "./Fav.css";
 
 const Fav = ({ id }) => {
-  const [, navigate] = useLocation();
+  // const [, navigate] = useLocation();
   const { isLogged, addFav, favs } = useUser();
   const [showModal, setShowModal] = useState(false);
 

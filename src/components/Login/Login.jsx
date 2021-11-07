@@ -50,7 +50,9 @@ const Login = ({ onLogin }) => {
           </button>
         </form>
       )}
-      {isLoginError && <strong>Invalid credentials</strong>}
+      {isLoginError && (
+        <strong className="Register-errors">Invalid credentials</strong>
+      )}
     </>
   );
 };

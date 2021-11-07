@@ -52,3 +52,7 @@
 .Login-form .btn {
   width: 100%;
 }
+strong {
+  margin: auto;
+  text-align: center;
+}
