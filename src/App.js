@@ -5,9 +5,12 @@ import SearchResults from './pages/SearchResults';
 import Detail from './pages/Detail';
 import { GifsContextProvider } from './context/GifsContext';
 import {UserContextProvider} from './context/UserContext';
+
 import './App.css';
+
 import Header from 'components/Header/Header';
-import Login from 'pages/Login';
+import LoginPage from 'pages/Login';
+import RegisterPage from 'pages/Register';
 
 const HomePage = React.lazy(() => import('./pages/Home'));
 
@@ -23,7 +26,8 @@ function App() {
         <Route path="/" component={HomePage} />
         <Route path="/search/:keyword/:rating?" component={SearchResults} />
         <Route path="/gif/:id" component={Detail} />
-        <Route path="/login" component={Login} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
         <Route path="/404" component={() => <h1 className="text-gradient">--/ 404 ERROR UwU /--</h1>} />
         </GifsContextProvider>
       </section>

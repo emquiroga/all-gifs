@@ -1,22 +1,29 @@
 import { useUser } from "hooks/useUser";
 import React from "react";
-import { Link } from "wouter";
+import { Link, useRoute } from "wouter";
 import "./Header.css";
 
 const Header = () => {
   const { isLogged, logout } = useUser();
+  const [match] = useRoute("/login");
   const handleLogout = () => {
     logout();
   };
-  return (
-    <header className="App-header">
-      {isLogged ? (
-        <button onClick={handleLogout}>Logout</button>
-      ) : (
+
+  const renderLoginButtons = ({ isLogged }) => {
+    return isLogged ? (
+      <button onClick={handleLogout}>Logout</button>
+    ) : (
+      <>
+        <Link to="/register">Register</Link>
         <Link to="/login">Login</Link>
-      )}
-    </header>
-  );
+      </>
+    );
+  };
+
+  const content = match ? null : renderLoginButtons({ isLogged });
+
+  return <header className="App-header">{content}</header>;
 };
 
 export default Header;

@@ -1,0 +1,9 @@
+.Register-errors {
+  color: var(--brand-color_1);
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+}
+.error-input {
+  border: 5px solid var(--brand-color_1);
+}

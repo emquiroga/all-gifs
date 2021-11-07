@@ -1,0 +1,54 @@
+.Login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+.Login-form label {
+  font-size: 1.3rem;
+  display: block;
+}
+.Login-form input {
+  background: #fff;
+  border: none, display block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  font-family: var(--font-primary);
+  color: var(--theme-body-bg);
+  outline: none;
+}
+.btn:hover {
+  background-color: var(--brand-color_5);
+  box-shadow: 2px 2px 0px var(--brand-color_10);
+  color: var(--brand-color_10);
+  transition: all 150ms ease-in-out;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 5px;
+  background-color: var(--brand-color_6);
+  border: none;
+  box-shadow: 2px 2px 0px var(--brand-color_8);
+  color: var(--theme-body-bg);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--font-primary);
+}
+.btn[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.Login-form .btn {
+  width: 100%;
+}

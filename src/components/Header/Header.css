@@ -2,14 +2,11 @@
   display: flex;
   justify-content: flex-end;
 }
-.App-header a {
-  color: white;
-}
+
 .App-header a:hover,
 .App-header button:hover {
-  background-color: var(--brand-color_5);
-  border: 2px solid var(--brand-color_10);
-  color: var(--brand-color_10);
+  border-bottom: 2px solid var(--brand-color_10);
+  color: var(--brand-color_4);
   transition: all 150ms ease-in-out;
 }
 
@@ -18,10 +15,9 @@
   width: 100px;
   height: 40px;
   padding: 0.5rem 1rem;
-  background-color: var(--brand-color_6);
-  border: 2px solid var(--brand-color_8);
-  border-radius: 15px;
-  color: var(--theme-body-bg);
+  background: none;
+  border: none;
+  color: white;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
