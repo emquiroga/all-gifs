@@ -6,7 +6,7 @@ export const useTitle = ({description, title}) => {
     useEffect(() => {
         const previousTitle = prevTitle.current;
         if (title) {
-            document.title = `${title} - GifHub`;
+            document.title = `${title} | GifHub`;
         }
         return () => {document.title = previousTitle}
     }, [title]) 

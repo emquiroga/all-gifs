@@ -1,3 +1,9 @@
+.App-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .App-title {
   font-family: var(--font-primary);
   max-width: 800px;

@@ -29,8 +29,8 @@ const SearchResults = ({params}) => {
            {loading ? <Spinner /> : 
            <>
            <Helmet> 
-             <title>{gifs ? `${gifs.length} results for ${keyword} - GifHub` : "Search..."}</title>
-             <meta name="description" content={gifs ? `${gifs.length} results for ${keyword} - GifHub` : "Search..."} />
+             <title>{gifs ? `${gifs.length} results for ${keyword} | GifHub` : "Search..."}</title>
+             <meta name="description" content={gifs ? `${gifs.length} results for ${keyword} | GifHub` : "Search..."} />
              <meta name="rating" content="General" />
              <link rel="canonical" href="https://gifhub.vercel.app/"/>
            </Helmet>

@@ -2,7 +2,7 @@ import Login from "components/Login/Login";
 import Modal from "components/Modal/Modal";
 import { useUser } from "hooks/useUser";
 import React, { useState } from "react";
-import "./Fav.css";
+import { FavCheck, FavSpan } from "./style";
 
 const Fav = ({ id }) => {
   const { isLogged, addFav, favs } = useUser();
@@ -28,11 +28,11 @@ const Fav = ({ id }) => {
 
   return (
     <>
-      <button className="Gif-fav" onClick={handleFav}>
-        <span role="img" aria-label={label}>
+      <FavCheck onClick={handleFav}>
+        <FavSpan role="img" aria-label={label}>
           {emoji}
-        </span>
-      </button>
+        </FavSpan>
+      </FavCheck>
       {showModal && (
         <Modal onClose={handleClose}>
           <Login onLogin={handleLogin} />

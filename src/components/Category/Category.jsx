@@ -1,21 +1,18 @@
 import React from "react";
-import { Link } from "wouter";
-import "./Category.css";
+import { CategoryTitle, CategoryList, ListItem, CategoryLink } from "./styles";
 
 const Category = ({ name, options = [] }) => {
   return (
-    <div className="Category">
-      <h3 className="Category-title">{decodeURI(name)}</h3>
-      <ul className="Category-list">
-        {options.map((option) => (
-          <li className="Category-list-item" key={option}>
-            <Link className="Category-link" to={`/search/${option}`}>
-              {option}
-            </Link>
-          </li>
+    <section>
+      <CategoryTitle>{decodeURI(name)}</CategoryTitle>
+      <CategoryList>
+        {options.map((option, index) => (
+          <ListItem key={option} index={index}>
+            <CategoryLink to={`/search/${option}`}>{option}</CategoryLink>
+          </ListItem>
         ))}
-      </ul>
-    </div>
+      </CategoryList>
+    </section>
   );
 };
 

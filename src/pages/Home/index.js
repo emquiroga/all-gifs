@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <>
         <Helmet>
-            <title>Home - GifHub</title>
+            <title>Home | GifHub</title>
             <meta name="description" content="Home page of GifHub" />
             <link rel="canonical" href="https://gifhub.vercel.app/"/>
         </Helmet>

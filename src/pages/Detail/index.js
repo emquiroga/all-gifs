@@ -5,6 +5,7 @@ import "./Detail.css"
 import Spinner from 'components/Spinner/Spinner';
 import { Redirect } from 'wouter';
 import { Helmet } from 'react-helmet';
+import Button from 'components/Button/Button';
 
 const Detail = ({params}) => {
     const {gif, loading, error} = useSingleGif({id: params.id});
@@ -23,15 +24,16 @@ const Detail = ({params}) => {
     if (!gif) return null
 
     return (
-        <>
+        <div className="App-detail">
         <Helmet>
-            <title>{title} - GifHub</title>
+            <title>{title} | GifHub</title>
             <meta name="description" content={title} />
             <link rel="canonical" href="https://gifhub.vercel.app/"/>
         </Helmet>
         <h3 className="App-title">{gif.title}</h3>
         <Gif {...gif} />
-        </>
+        <Button href="/">Back</Button>
+        </div>
     )
 }
 
