@@ -2,11 +2,9 @@ import Login from "components/Login/Login";
 import Modal from "components/Modal/Modal";
 import { useUser } from "hooks/useUser";
 import React, { useState } from "react";
-import { useLocation } from "wouter";
 import "./Fav.css";
 
 const Fav = ({ id }) => {
-  // const [, navigate] = useLocation();
   const { isLogged, addFav, favs } = useUser();
   const [showModal, setShowModal] = useState(false);
 
