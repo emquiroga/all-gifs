@@ -12,7 +12,7 @@
 - testing-library/react-hooks
 - just-debounce-it
 
-### La app se basa en en el display de diferentes gifs y su adminitración haciendo una llamada a [Giphy SDK](https://developers.giphy.com/docs/sdk/)
+### La app se basa en el display de diferentes gifs y su adminitración haciendo una llamada a [Giphy SDK](https://developers.giphy.com/docs/sdk/)
 
 ### Se consumen diferentes endpoints de la misma API para lograr búsquedas y detalles de los gifs, a la vez que se administran los mismos en el sessionStorage.
 
